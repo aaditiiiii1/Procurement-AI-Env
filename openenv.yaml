@@ -1,0 +1,188 @@
+name: ProcurementAI-Env
+description: >
+  An OpenEnv-compatible environment simulating real-world procurement and
+  vendor selection workflows. An AI agent acts as a procurement manager -
+  comparing vendors, negotiating discounts, evaluating risk, analyzing
+  delivery timelines, handling hidden fees, satisfying stakeholder priorities,
+  and choosing the best vendor under budget constraints.
+
+version: "1.0.0"
+author: ProcurementAI Team
+license: MIT
+
+environment:
+  type: sequential
+  max_steps_per_episode: 25
+  reward_range: [-1.0, 1.0]
+  final_score_range: [0.0, 1.0]
+
+endpoints:
+  base_url: http://localhost:7860
+  reset:
+    method: POST
+    path: /reset
+    description: Reset the environment and start a new episode.
+    request_body:
+      task_id: string | null
+      seed: integer
+    response: ResetResponse
+
+  step:
+    method: POST
+    path: /step
+    description: Execute an agent action.
+    request_body:
+      action_type: string
+      vendor_name: string | null
+      message: string | null
+      parameters: object
+    response: StepResponse
+
+  state:
+    method: GET
+    path: /state
+    description: Retrieve full environment state.
+    response: EnvironmentState
+
+  health:
+    method: GET
+    path: /health
+    description: Health check.
+    response: HealthResponse
+
+  tasks:
+    method: GET
+    path: /tasks
+    description: List all available tasks.
+    response: TaskListResponse
+
+action_space:
+  type: discrete
+  actions:
+    - name: shortlist_vendor
+      description: Add a vendor to the shortlist.
+      requires_vendor: true
+
+    - name: reject_vendor
+      description: Remove a risky or poor vendor from consideration.
+      requires_vendor: true
+
+    - name: negotiate_vendor
+      description: Negotiate a discount or better terms with a vendor.
+      requires_vendor: true
+      parameters:
+        - name: requested_discount_pct
+          type: float
+          description: Requested discount percentage.
+
+    - name: request_contract_change
+      description: Ask a vendor to modify contract terms.
+      requires_vendor: true
+
+    - name: request_delivery_guarantee
+      description: Ask a vendor to guarantee delivery within a timeframe.
+      requires_vendor: true
+      parameters:
+        - name: required_days
+          type: integer
+          description: Maximum delivery days requested.
+
+    - name: request_clarification
+      description: Request additional information about the task or a vendor.
+      requires_vendor: false
+
+    - name: compare_vendors
+      description: Compare all active vendors side by side.
+      requires_vendor: false
+
+    - name: select_vendor
+      description: Select a vendor as the final choice (must finalize after).
+      requires_vendor: true
+
+    - name: finalize_decision
+      description: Confirm and finalize the procurement decision.
+      requires_vendor: false
+
+observation_space:
+  fields:
+    - name: task_id
+      type: string
+    - name: task_difficulty
+      type: string
+      enum: [easy, medium, hard]
+    - name: task_description
+      type: string
+    - name: budget
+      type: float
+    - name: remaining_steps
+      type: integer
+    - name: vendors
+      type: array
+      items: Vendor
+    - name: negotiation_history
+      type: array
+      items: NegotiationResult
+    - name: shortlisted_vendors
+      type: array
+      items: string
+    - name: rejected_vendors
+      type: array
+      items: string
+    - name: stakeholder_priorities
+      type: array
+      items: StakeholderProfile
+    - name: current_reward
+      type: float
+    - name: selected_vendor
+      type: string | null
+    - name: finalized
+      type: boolean
+    - name: termination_reason
+      type: string
+    - name: comparison_result
+      type: object | null
+    - name: clarification_response
+      type: string | null
+    - name: messages
+      type: array
+      items: string
+
+tasks:
+  total: 10
+  difficulties:
+    easy: 3
+    medium: 4
+    hard: 3
+  categories:
+    - hardware
+    - cloud_software
+    - enterprise_services
+
+reward_design:
+  type: dense
+  step_rewards:
+    shortlist_good_vendor: +0.05
+    reject_risky_vendor: +0.05
+    successful_negotiation: +0.10
+    stakeholder_satisfaction: +0.10
+    select_within_budget: +0.15
+    select_optimal_vendor: +0.15
+    wasted_action: -0.05
+    repeated_invalid_action: -0.10
+    select_risky_vendor: -0.15
+    exceed_budget: -0.20
+    select_blacklisted: -0.25
+
+  final_grading:
+    formula: >
+      budget_score * 0.25 + quality_score * 0.20 + delivery_score * 0.15 +
+      risk_score * 0.20 + negotiation_score * 0.10 + stakeholder_score * 0.10
+    range: [0.0, 1.0]
+
+deployment:
+  platform: huggingface_spaces
+  runtime: docker
+  port: 7860
+  resources:
+    vcpu: 2
+    ram_gb: 8
