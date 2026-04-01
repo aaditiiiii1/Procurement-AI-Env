@@ -1,0 +1,58 @@
+[
+  {
+    "task_id": "medium-001",
+    "title": "Cloud CRM Platform Subscription",
+    "description": "Horizon Marketing Agency (85 employees) needs a cloud-based CRM platform to replace their legacy system. The new CRM must support marketing automation, lead scoring, and analytics dashboards. Several vendors offer competitive pricing, but some have aggressive renewal terms, hidden onboarding fees, or poor data portability. The VP of Sales wants fast deployment, Finance insists on staying under budget, and IT Security requires SOC2 compliance. The agent must negotiate to get the best deal while avoiding vendor lock-in.",
+    "difficulty": "medium",
+    "budget": 20000.00,
+    "max_steps": 15,
+    "vendor_ids": ["CloudNova", "SkyPlatform Inc.", "NimbusWare", "DataForge Systems", "QuickShip Logistics"],
+    "stakeholder_ids": ["Sarah Chen", "Marcus Johnson", "Priya Patel"],
+    "optimal_vendor": "CloudNova",
+    "acceptable_vendors": ["CloudNova", "NimbusWare"],
+    "category": "cloud_software",
+    "notes": "CloudNova offers the best balance within budget. NimbusWare is higher quality but over budget without negotiation. SkyPlatform has terrible lock-in. DataForge has hidden migration fees. QuickShip is blacklisted."
+  },
+  {
+    "task_id": "medium-002",
+    "title": "Project Management SaaS Selection",
+    "description": "Cedar Creek Construction (200 employees across 5 sites) is adopting a project management SaaS tool to replace spreadsheets. The tool must handle Gantt charts, resource allocation, and mobile access for field crews. The Operations Director needs deployment within 10 days. The CFO wants annual cost to stay well under $20K. Engineering wants a highly-rated tool. Several vendors look appealing on the surface but have hidden fees or poor contract terms.",
+    "difficulty": "medium",
+    "budget": 18000.00,
+    "max_steps": 15,
+    "vendor_ids": ["CloudNova", "SkyPlatform Inc.", "DataForge Systems", "NimbusWare"],
+    "stakeholder_ids": ["Sarah Chen", "Priya Patel", "Lisa Wang"],
+    "optimal_vendor": "CloudNova",
+    "acceptable_vendors": ["CloudNova"],
+    "category": "cloud_software",
+    "notes": "CloudNova fits budget with negotiation. NimbusWare is over budget. SkyPlatform lock-in is a dealbreaker for Lisa Wang. DataForge delivery is too slow."
+  },
+  {
+    "task_id": "medium-003",
+    "title": "Data Analytics Platform Procurement",
+    "description": "Pineridge Health Systems needs a HIPAA-compliant data analytics platform to process patient outcome data across 12 clinics. IT Security demands strict compliance, Finance wants to stay under budget, and the Chief Medical Officer needs the platform operational within 5 business days for an upcoming audit. Some vendors offer attractive pricing but lack healthcare compliance certifications.",
+    "difficulty": "medium",
+    "budget": 25000.00,
+    "max_steps": 15,
+    "vendor_ids": ["CloudNova", "NimbusWare", "SkyPlatform Inc.", "DataForge Systems", "QuickShip Logistics"],
+    "stakeholder_ids": ["Sarah Chen", "Tom Mitchell", "Marcus Johnson"],
+    "optimal_vendor": "NimbusWare",
+    "acceptable_vendors": ["NimbusWare", "CloudNova"],
+    "category": "cloud_software",
+    "notes": "NimbusWare has HIPAA + fastest delivery. CloudNova also has HIPAA and fits budget. SkyPlatform lacks HIPAA. DataForge too slow. QuickShip blacklisted."
+  },
+  {
+    "task_id": "medium-004",
+    "title": "Cybersecurity Monitoring Tool Subscription",
+    "description": "Silverline Financial Corp requires a cloud-based cybersecurity monitoring tool with real-time threat detection, SIEM integration, and SOC2 + ISO27001 compliance. The CISO insists on zero vendor lock-in and full data portability. Budget is tight, and the procurement team expects negotiation to achieve at least a 10% discount. Delivery must be within one week.",
+    "difficulty": "medium",
+    "budget": 19000.00,
+    "max_steps": 15,
+    "vendor_ids": ["CloudNova", "NimbusWare", "SkyPlatform Inc.", "DataForge Systems"],
+    "stakeholder_ids": ["Tom Mitchell", "Sarah Chen", "Lisa Wang"],
+    "optimal_vendor": "CloudNova",
+    "acceptable_vendors": ["CloudNova"],
+    "category": "cloud_software",
+    "notes": "CloudNova fits budget after negotiation, has compliance certs, fast delivery, and no lock-in. NimbusWare is over budget. SkyPlatform has lock-in — rejected by Tom Mitchell. DataForge too slow and lacks data portability."
+  }
+]
