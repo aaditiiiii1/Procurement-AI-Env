@@ -1,0 +1,44 @@
+[
+  {
+    "task_id": "hard-001",
+    "title": "Enterprise Digital Transformation Services",
+    "description": "Pinnacle Manufacturing (2,500 employees, 8 facilities) is undertaking a digital transformation initiative spanning ERP modernization, supply chain analytics, IoT sensor integration, and employee training. The project involves multiple departments with conflicting priorities: Finance demands cost control, Engineering wants best-in-class technology, Operations needs rapid deployment across all facilities within 30 days, Legal requires strict compliance (SOC2, ISO27001, GDPR), and the CEO wants a long-term strategic partner with strong ESG credentials. Several vendors offer aggressive discounts but have vendor lock-in clauses, hidden implementation fees, or lack required certifications. The agent must negotiate across multiple rounds, balance stakeholder demands, and avoid costly contractual pitfalls.",
+    "difficulty": "hard",
+    "budget": 110000.00,
+    "max_steps": 25,
+    "vendor_ids": ["Meridian Consulting Group", "Apex Enterprise Solutions", "CostCutter Corp", "GlobalBridge Partners", "SwiftEdge Technologies", "ShadowTech Ltd"],
+    "stakeholder_ids": ["Sarah Chen", "Marcus Johnson", "Priya Patel", "David Okoro", "Elena Rodriguez"],
+    "optimal_vendor": "Meridian Consulting Group",
+    "acceptable_vendors": ["Meridian Consulting Group", "SwiftEdge Technologies"],
+    "category": "enterprise_services",
+    "notes": "Meridian offers good quality within budget with compliant contracts. Apex is excellent but over budget (needs heavy negotiation). CostCutter is cheap but high risk with terrible lock-in. GlobalBridge has moderate risk and hidden PM fees. SwiftEdge is a solid fallback. ShadowTech is blacklisted."
+  },
+  {
+    "task_id": "hard-002",
+    "title": "Multi-Department IT Infrastructure Overhaul",
+    "description": "Crestview University (15,000 students, 3 campuses) is replacing its aging IT infrastructure across the Computer Science department, Administrative Services, the Medical School, and the Athletics department. Each department has unique requirements: CompSci needs high-performance compute clusters, Admin needs secure document management, the Medical School requires HIPAA-compliant systems, and Athletics needs real-time streaming capabilities. The university procurement committee involves representatives from Finance, IT Security, Operations, and the Provost's Office — each with different priorities. Several vendors are competing aggressively, but two are blacklisted due to prior contract violations. The agent must navigate complex stakeholder dynamics, multi-round negotiations, and compliance requirements while staying within a constrained institutional budget.",
+    "difficulty": "hard",
+    "budget": 100000.00,
+    "max_steps": 25,
+    "vendor_ids": ["Apex Enterprise Solutions", "Meridian Consulting Group", "SwiftEdge Technologies", "CostCutter Corp", "GlobalBridge Partners", "ShadowTech Ltd"],
+    "stakeholder_ids": ["Sarah Chen", "Marcus Johnson", "David Okoro", "Tom Mitchell", "Elena Rodriguez", "Lisa Wang"],
+    "optimal_vendor": "SwiftEdge Technologies",
+    "acceptable_vendors": ["SwiftEdge Technologies", "Meridian Consulting Group"],
+    "category": "enterprise_services",
+    "notes": "SwiftEdge fits the constrained budget with good quality and fast delivery. Apex is too expensive even after negotiation. Meridian is close to budget. CostCutter has extreme lock-in risk. GlobalBridge requires careful negotiation on hidden fees. ShadowTech is blacklisted."
+  },
+  {
+    "task_id": "hard-003",
+    "title": "Global Supply Chain Management Platform",
+    "description": "Oceanic Freight International (5,000 employees, operating in 30 countries) needs a unified supply chain management platform that integrates with their existing SAP ERP, handles multi-currency billing, complies with EU GDPR and US FedRAMP requirements, and provides real-time cargo tracking. The CTO demands a platform with 99.95% uptime SLA, the CFO wants to stay well under $100K, the Head of Logistics needs live deployment in under 3 weeks, and the General Counsel absolutely refuses any vendor with data retention clauses or lock-in risks. Multiple vendors compete aggressively, making negotiation essential. The agent faces time pressure (limited steps), budget pressure, compliance complexity, and conflicting stakeholder demands simultaneously.",
+    "difficulty": "hard",
+    "budget": 95000.00,
+    "max_steps": 25,
+    "vendor_ids": ["Apex Enterprise Solutions", "Meridian Consulting Group", "GlobalBridge Partners", "CostCutter Corp", "SwiftEdge Technologies", "ShadowTech Ltd"],
+    "stakeholder_ids": ["Sarah Chen", "Marcus Johnson", "Priya Patel", "David Okoro", "Elena Rodriguez", "Tom Mitchell", "Lisa Wang"],
+    "optimal_vendor": "Meridian Consulting Group",
+    "acceptable_vendors": ["Meridian Consulting Group", "SwiftEdge Technologies"],
+    "category": "enterprise_services",
+    "notes": "Meridian fits budget, has GDPR compliance, good reliability. Apex has FedRAMP but costs too much. GlobalBridge auto-renewal is problematic. CostCutter is too risky. SwiftEdge is a decent fallback but lacks some compliance certs. ShadowTech is blacklisted. Agent must negotiate Meridian for best outcome."
+  }
+]
