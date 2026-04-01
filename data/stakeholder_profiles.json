@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Sarah Chen",
+    "department": "Finance",
+    "priority_weights": {
+      "cost": 0.50,
+      "quality": 0.15,
+      "delivery": 0.10,
+      "risk": 0.15,
+      "sustainability": 0.10
+    },
+    "notes": "Strongly prefers staying 10% under budget. Concerned about hidden renewal costs and termination fees."
+  },
+  {
+    "name": "Marcus Johnson",
+    "department": "Engineering",
+    "priority_weights": {
+      "cost": 0.10,
+      "quality": 0.45,
+      "delivery": 0.20,
+      "risk": 0.15,
+      "sustainability": 0.10
+    },
+    "notes": "Needs top-tier reliability and quality. Willing to pay a premium for best-in-class tools and SLA guarantees."
+  },
+  {
+    "name": "Priya Patel",
+    "department": "Operations",
+    "priority_weights": {
+      "cost": 0.15,
+      "quality": 0.20,
+      "delivery": 0.45,
+      "risk": 0.10,
+      "sustainability": 0.10
+    },
+    "notes": "Delivery timeline is critical. Project launch depends on procurement completing within 2 weeks."
+  },
+  {
+    "name": "David Okoro",
+    "department": "Legal & Compliance",
+    "priority_weights": {
+      "cost": 0.05,
+      "quality": 0.10,
+      "delivery": 0.05,
+      "risk": 0.60,
+      "sustainability": 0.20
+    },
+    "notes": "Must have SOC2 and ISO27001 certifications. No vendor lock-in. Data portability is non-negotiable. Rejects any vendor with critical risk."
+  },
+  {
+    "name": "Elena Rodriguez",
+    "department": "Executive Leadership",
+    "priority_weights": {
+      "cost": 0.25,
+      "quality": 0.25,
+      "delivery": 0.15,
+      "risk": 0.20,
+      "sustainability": 0.15
+    },
+    "notes": "Looking for long-term strategic partnerships. Values vendor reliability and brand reputation. Prefers vendors with strong ESG profiles."
+  },
+  {
+    "name": "Tom Mitchell",
+    "department": "IT Security",
+    "priority_weights": {
+      "cost": 0.05,
+      "quality": 0.20,
+      "delivery": 0.05,
+      "risk": 0.55,
+      "sustainability": 0.15
+    },
+    "notes": "HIPAA and GDPR compliance required for healthcare data. Zero tolerance for vendors without data portability. Concerned about shadow IT and unauthorized data retention."
+  },
+  {
+    "name": "Lisa Wang",
+    "department": "Procurement",
+    "priority_weights": {
+      "cost": 0.30,
+      "quality": 0.20,
+      "delivery": 0.20,
+      "risk": 0.20,
+      "sustainability": 0.10
+    },
+    "notes": "Experienced negotiator. Expects at least 5-10% discount from listed price. Wants transparent contract terms with no hidden fees."
+  }
+]
