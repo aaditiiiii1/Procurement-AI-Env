@@ -1,0 +1,44 @@
+[
+  {
+    "task_id": "easy-001",
+    "title": "Office Laptop Procurement for Startup",
+    "description": "GreenLeaf Analytics, a 20-person data analytics startup, needs to procure 15 business laptops for new hires joining next month. The laptops must meet baseline specs for data analysis work (16 GB RAM, SSD, 14-inch screen). The CEO wants reliable hardware from a reputable vendor with fast delivery. Budget is generous relative to the market, making this a straightforward vendor selection task.",
+    "difficulty": "easy",
+    "budget": 50000.00,
+    "max_steps": 10,
+    "vendor_ids": ["TechVault Solutions", "BudgetByte Hardware", "ProGear International"],
+    "stakeholder_ids": ["Sarah Chen", "Marcus Johnson"],
+    "optimal_vendor": "TechVault Solutions",
+    "acceptable_vendors": ["TechVault Solutions", "ProGear International"],
+    "category": "hardware",
+    "notes": "TechVault offers the best balance of cost, quality, and delivery. ProGear is premium but acceptable. BudgetByte has hidden fees and poor ratings."
+  },
+  {
+    "task_id": "easy-002",
+    "title": "Office Supply Vendor Selection",
+    "description": "Maple Street Design Studio needs a reliable vendor to supply recurring office materials — printer paper, toner cartridges, pens, notebooks, and whiteboard markers. The order is a one-time bulk purchase for the next quarter. The studio wants decent quality at a reasonable price with delivery within 2 weeks.",
+    "difficulty": "easy",
+    "budget": 5000.00,
+    "max_steps": 10,
+    "vendor_ids": ["TechVault Solutions", "BudgetByte Hardware"],
+    "stakeholder_ids": ["Lisa Wang"],
+    "optimal_vendor": "TechVault Solutions",
+    "acceptable_vendors": ["TechVault Solutions"],
+    "category": "hardware",
+    "notes": "Simple comparison. TechVault is clearly superior on quality and reliability."
+  },
+  {
+    "task_id": "easy-003",
+    "title": "Conference Room AV Equipment Purchase",
+    "description": "Bridgeport Legal Associates is outfitting two new conference rooms with audio-visual equipment including a projector, wireless presentation system, and video conferencing camera. They have adequate budget and need equipment delivered within 3 weeks for a client event.",
+    "difficulty": "easy",
+    "budget": 45000.00,
+    "max_steps": 10,
+    "vendor_ids": ["TechVault Solutions", "BudgetByte Hardware", "ProGear International"],
+    "stakeholder_ids": ["Priya Patel"],
+    "optimal_vendor": "ProGear International",
+    "acceptable_vendors": ["ProGear International", "TechVault Solutions"],
+    "category": "hardware",
+    "notes": "ProGear offers fastest delivery (7 days) and highest quality, fitting the tight timeline for the client event."
+  }
+]
