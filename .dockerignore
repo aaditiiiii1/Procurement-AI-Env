@@ -1,0 +1,39 @@
+# Exclude secrets — never bake into Docker image
+.env
+
+# Dev-only dependencies (not needed in container)
+requirements-dev.txt
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+
+# Development / test files
+tests/
+.pytest_cache/
+htmlcov/
+.coverage
+pytest.ini
+
+# Git / IDE
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Logs and generated results (written at runtime, not needed at build)
+logs/
+results/
+
+# Documentation
+*.md
+README*
+
+# Docker compose (not needed inside the container)
+docker-compose.yml
