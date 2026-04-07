@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+# NOTE: do NOT add env/ here, that would hide the env/ Python package
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/*.log
+
+# Results (ignore generated files but keep baseline)
+results/*.json
+!results/baseline_scores.json
+!results/.gitkeep
+
+# Docker (commit .dockerignore so Docker builds are reproducible)
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Python caches
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env.*
+!.env.example
+
+# mypy / Ruff / pytest extras
+.mypy_cache/
+.ruff_cache/
+.cache/
