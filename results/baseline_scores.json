@@ -1,0 +1,201 @@
+{
+  "model": "heuristic_fallback",
+  "provider": "heuristic",
+  "agent": "heuristic",
+  "random_seed": 42,
+  "total_tasks": 10,
+  "average_score": 0.5974,
+  "elapsed_seconds": 0.26,
+  "results": [
+    {
+      "task_id": "easy-001",
+      "title": "Office Laptop Procurement for Startup",
+      "difficulty": "easy",
+      "steps_taken": 8,
+      "final_score": 0.6299,
+      "grading_breakdown": {
+        "budget_score": 0.0417,
+        "quality_score": 0.19,
+        "delivery_score": 0.1325,
+        "risk_score": 0.2,
+        "negotiation_score": 0.0,
+        "stakeholder_score": 0.0658
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "ProGear International",
+      "optimal_vendor": "TechVault Solutions",
+      "cumulative_reward": -0.0343
+    },
+    {
+      "task_id": "easy-002",
+      "title": "Office Supply Vendor Selection",
+      "difficulty": "easy",
+      "steps_taken": 1,
+      "final_score": 0.0,
+      "grading_breakdown": {
+        "budget_score": 0.0,
+        "quality_score": 0.0,
+        "delivery_score": 0.0,
+        "risk_score": 0.0,
+        "negotiation_score": 0.0,
+        "stakeholder_score": 0.0
+      },
+      "termination_reason": "impossible_budget",
+      "selected_vendor": null,
+      "optimal_vendor": "TechVault Solutions",
+      "cumulative_reward": -0.025
+    },
+    {
+      "task_id": "easy-003",
+      "title": "Conference Room AV Equipment Purchase",
+      "difficulty": "easy",
+      "steps_taken": 6,
+      "final_score": 0.7161,
+      "grading_breakdown": {
+        "budget_score": 0.1111,
+        "quality_score": 0.17,
+        "delivery_score": 0.115,
+        "risk_score": 0.2,
+        "negotiation_score": 0.05,
+        "stakeholder_score": 0.07
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "TechVault Solutions",
+      "optimal_vendor": "ProGear International",
+      "cumulative_reward": 0.345
+    },
+    {
+      "task_id": "hard-001",
+      "title": "Enterprise Digital Transformation Services",
+      "difficulty": "hard",
+      "steps_taken": 10,
+      "final_score": 0.5102,
+      "grading_breakdown": {
+        "budget_score": 0.0455,
+        "quality_score": 0.196,
+        "delivery_score": 0.0975,
+        "risk_score": 0.2,
+        "negotiation_score": 0.0,
+        "stakeholder_score": 0.0712
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "Apex Enterprise Solutions",
+      "optimal_vendor": "Meridian Consulting Group",
+      "cumulative_reward": 0.1462
+    },
+    {
+      "task_id": "hard-002",
+      "title": "Multi-Department IT Infrastructure Overhaul",
+      "difficulty": "hard",
+      "steps_taken": 9,
+      "final_score": 0.6813,
+      "grading_breakdown": {
+        "budget_score": 0.1042,
+        "quality_score": 0.184,
+        "delivery_score": 0.075,
+        "risk_score": 0.2,
+        "negotiation_score": 0.05,
+        "stakeholder_score": 0.0682
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "Meridian Consulting Group",
+      "optimal_vendor": "SwiftEdge Technologies",
+      "cumulative_reward": 0.4932
+    },
+    {
+      "task_id": "hard-003",
+      "title": "Global Supply Chain Management Platform",
+      "difficulty": "hard",
+      "steps_taken": 9,
+      "final_score": 0.7081,
+      "grading_breakdown": {
+        "budget_score": 0.0833,
+        "quality_score": 0.184,
+        "delivery_score": 0.075,
+        "risk_score": 0.2,
+        "negotiation_score": 0.05,
+        "stakeholder_score": 0.0658
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "Meridian Consulting Group",
+      "optimal_vendor": "Meridian Consulting Group",
+      "cumulative_reward": 0.6408
+    },
+    {
+      "task_id": "medium-001",
+      "title": "Cloud CRM Platform Subscription",
+      "difficulty": "medium",
+      "steps_taken": 9,
+      "final_score": 0.6367,
+      "grading_breakdown": {
+        "budget_score": 0.0417,
+        "quality_score": 0.18,
+        "delivery_score": 0.145,
+        "risk_score": 0.2,
+        "negotiation_score": 0.0,
+        "stakeholder_score": 0.07
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "NimbusWare",
+      "optimal_vendor": "CloudNova",
+      "cumulative_reward": -0.005
+    },
+    {
+      "task_id": "medium-002",
+      "title": "Project Management SaaS Selection",
+      "difficulty": "medium",
+      "steps_taken": 7,
+      "final_score": 0.7473,
+      "grading_breakdown": {
+        "budget_score": 0.0833,
+        "quality_score": 0.16,
+        "delivery_score": 0.1425,
+        "risk_score": 0.2,
+        "negotiation_score": 0.05,
+        "stakeholder_score": 0.0614
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "CloudNova",
+      "optimal_vendor": "CloudNova",
+      "cumulative_reward": 0.4364
+    },
+    {
+      "task_id": "medium-003",
+      "title": "Data Analytics Platform Procurement",
+      "difficulty": "medium",
+      "steps_taken": 8,
+      "final_score": 0.8345,
+      "grading_breakdown": {
+        "budget_score": 0.1333,
+        "quality_score": 0.18,
+        "delivery_score": 0.145,
+        "risk_score": 0.2,
+        "negotiation_score": 0.05,
+        "stakeholder_score": 0.0761
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "NimbusWare",
+      "optimal_vendor": "NimbusWare",
+      "cumulative_reward": 0.5011
+    },
+    {
+      "task_id": "medium-004",
+      "title": "Cybersecurity Monitoring Tool Subscription",
+      "difficulty": "medium",
+      "steps_taken": 9,
+      "final_score": 0.5102,
+      "grading_breakdown": {
+        "budget_score": 0.0175,
+        "quality_score": 0.18,
+        "delivery_score": 0.145,
+        "risk_score": 0.2,
+        "negotiation_score": 0.0,
+        "stakeholder_score": 0.0677
+      },
+      "termination_reason": "finalized",
+      "selected_vendor": "NimbusWare",
+      "optimal_vendor": "CloudNova",
+      "cumulative_reward": -0.0823
+    }
+  ]
+}
