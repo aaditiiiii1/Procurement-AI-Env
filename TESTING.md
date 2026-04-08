@@ -22,16 +22,7 @@ $env:OPENAI_API_KEY -ne $null
 
 ---
 
-## 2. Automated Stress Testing
-Run the comprehensive stress test suite to verify internal state management and model validation.
-
-```powershell
-python stress_test.py
-```
-
----
-
-## 3. Manual Protocol Verification (PowerShell)
+## 2. Manual Protocol Verification (PowerShell)
 The following PowerShell commands simulate various API requests to verify robustness. Run these from any secondary PowerShell terminal.
 
 ### H-01: Empty Reset Payload
@@ -71,7 +62,7 @@ Verifies server responsiveness under successive polling conditions.
 
 ---
 
-## 4. Logical Validation Matrix
+## 3. Logical Validation Matrix
 
 | Category | Scenario | Outcome | PowerShell Command (IRM = Invoke-RestMethod) |
 | :--- | :--- | :--- | :--- |
@@ -95,7 +86,7 @@ Verifies server responsiveness under successive polling conditions.
 
 ---
 
-## 5. Judges' Stress-Test Simulation (High-Level Integrity)
+## 4. Judges' Stress-Test Simulation (High-Level Integrity)
 
 | Category | Stress Test Scenario | Required Behavior | PowerShell Command |
 | :--- | :--- | :--- | :--- |
@@ -115,7 +106,7 @@ Verifies server responsiveness under successive polling conditions.
 
 ---
 
-## 6. Filtration Shield: Disqualification Prevention
+## 5. Filtration Shield: Disqualification Prevention
 Judges use automated scripts to filter out 80% of projects. Follow these "Master Tips" to stay in the game.
 
 | Filter Category | Mandatory Check | Verification Command (PowerShell) |
@@ -128,7 +119,7 @@ Judges use automated scripts to filter out 80% of projects. Follow these "Master
 
 ---
 
-## 7. End-to-End Simulation
+## 6. End-to-End Simulation
 Run the baseline inference script to confirm the entire agent loop (LLM -> Backend -> Grader) is functional.
 
 ```powershell
@@ -139,7 +130,7 @@ Check the log output for the standard finalization marker: `[END] success=True s
 
 ---
 
-## 8. Official Filgration Verification (Copy-Paste Snippets)
+## 7. Official Filgration Verification (Copy-Paste Snippets)
 Run these commands in PowerShell to be 100% sure your submission won't be filtered out.
 
 ### V-01: Port Verification (Hugging Face Compatibility)
