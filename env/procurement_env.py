@@ -173,9 +173,6 @@ class ProcurementEnv:
             stakeholder_priorities=[s.model_copy(deep=True) for s in self._stakeholders],
         )
 
-    # ------------------------------------------------------------------ #
-    # Action handlers                                                      #
-    # ------------------------------------------------------------------ #
 
     def _handle_shortlist(self, action: Action) -> Tuple[float, Dict[str, float]]:
         vendor = self._find_vendor(action.vendor_name)
@@ -369,10 +366,7 @@ class ProcurementEnv:
         ActionType.FINALIZE_DECISION: _handle_finalize,
     }
 
-    # ------------------------------------------------------------------ #
-    # Termination checks                                                   #
-    # ------------------------------------------------------------------ #
-
+    # Termination checks
     def _check_termination(self) -> None:
         if self._done:
             return
@@ -415,10 +409,7 @@ class ProcurementEnv:
                 )
                 return
 
-    # ------------------------------------------------------------------ #
-    # Helpers                                                              #
-    # ------------------------------------------------------------------ #
-
+    # Helpers
     def _find_vendor(self, name: Optional[str]) -> Optional[Vendor]:
         if not name:
             return None

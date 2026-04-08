@@ -17,12 +17,20 @@ from env.procurement_env import ProcurementEnv
 from env.tasks import load_all_tasks
 
 # Mandatory hackathon environment variables
-API_KEY = (
-    os.getenv("OPENAI_API_KEY")
-    or os.getenv("HF_TOKEN")
-    or os.getenv("API_KEY")
-    or "fake_key"
-)
+API_KEY = os.getenv("OPENAI_API_KEY") or os.getenv("HF_TOKEN") or os.getenv("API_KEY")
+
+# Heuristic-only mode
+HEURISTIC_MODE = not API_KEY
+
+if not HEURISTIC_MODE:
+    # We are in LLM mode, validate required variables
+    if not API_KEY:
+        print("ERROR: API_KEY, OPENAI_API_KEY, or HF_TOKEN must be set for LLM-based inference.")
+        sys.exit(1)
+else:
+    print("INFO: No API key found. Running in heuristic-only mode.")
+    API_KEY = "heuristic_mode"  # Placeholder for internal logic
+
 API_BASE_URL = os.getenv("API_BASE_URL", "https://router.huggingface.co/v1")
 MODEL_NAME = os.getenv("MODEL_NAME", "Qwen/Qwen2.5-72B-Instruct")
 IMAGE_NAME = os.getenv("IMAGE_NAME")  # If you are using docker image
@@ -175,14 +183,22 @@ def main():
 
         try:
             while not done and step_count < 25:
-                # LLM call via OpenAI Client
-                response = client.chat.completions.create(
-                    model=MODEL_NAME,
-                    messages=messages,
-                    temperature=0.2,
-                    max_tokens=512,
-                )
-                assistant_text = response.choices[0].message.content or ""
+                if HEURISTIC_MODE:
+                    # Simplified heuristic agent logic
+                    from env.agent import HeuristicAgent
+                    agent = HeuristicAgent(seed=DEFAULT_RANDOM_SEED)
+                    action = agent.get_action(obs)
+                    assistant_text = f"Heuristic action: {action.action_type}"
+                else:
+                    # LLM call via OpenAI Client
+                    response = client.chat.completions.create(
+                        model=MODEL_NAME,
+                        messages=messages,
+                        temperature=0.2,
+                        max_tokens=512,
+                    )
+                    assistant_text = response.choices[0].message.content or ""
+                
                 action = _parse_action(assistant_text)
 
                 # Build action string for logging
