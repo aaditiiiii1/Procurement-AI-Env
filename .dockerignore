@@ -37,3 +37,5 @@ README*
 
 # Docker compose (not needed inside the container)
 docker-compose.yml
+
+note.txt
