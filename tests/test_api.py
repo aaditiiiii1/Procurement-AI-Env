@@ -5,7 +5,7 @@ from __future__ import annotations
 import pytest
 from fastapi.testclient import TestClient
 
-from app import app
+from server.app import app, env as global_env
 
 
 @pytest.fixture
@@ -78,9 +78,20 @@ class TestStepEndpoint:
         assert "done" in data
 
     def test_step_without_reset_400(self, client: TestClient) -> None:
-        # The global env may or may not be reset; this tests graceful handling
-        # We use a fresh client which shares the module-level env
-        pass  # State-dependent; covered by unit tests
+        original_env = global_env
+        app.dependency_overrides = {} # Clear any overrides
+        try:
+            global_env = None
+            
+            # This client will now get a fresh, non-reset environment
+            fresh_client = TestClient(app)
+            resp = fresh_client.post("/step", json={"action_type": "compare_vendors"})
+            assert resp.status_code == 400
+            assert "not reset" in resp.json()["detail"].lower()
+        finally:
+            # Restore env for other tests
+            global_env = original_env
+            app.dependency_overrides = {}
 
     def test_full_episode_via_api(self, client: TestClient) -> None:
         # Reset
