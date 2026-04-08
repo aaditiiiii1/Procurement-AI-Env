@@ -1,14 +1,3 @@
----
-title: ProcurementAI-Env
-emoji: 🏢
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-tags:
-  - openenv
-pinned: false
----
-
 # ProcurementAI-Env
 
 **An OpenEnv-compatible environment** where an AI agent acts as a procurement manager - comparing vendors, negotiating contracts, managing risk, and selecting the best vendor under budget constraints.
