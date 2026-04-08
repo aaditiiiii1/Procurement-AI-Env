@@ -545,7 +545,7 @@ final_score = (
     negotiation_score * 0.10 +
     stakeholder_score * 0.10
 )
-# Clamped to [0.0, 1.0]
+# Clamped to (0, 1)
 # +0.05 bonus for optimal vendor, -0.10 penalty for non-acceptable vendor
 ```
 
