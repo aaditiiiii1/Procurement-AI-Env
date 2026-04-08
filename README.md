@@ -1,3 +1,12 @@
+---
+title: Procurement AI Env
+emoji: 🏢
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 # ProcurementAI-Env
 
 **An OpenEnv-compatible environment** where an AI agent acts as a procurement manager - comparing vendors, negotiating contracts, managing risk, and selecting the best vendor under budget constraints.
@@ -402,9 +411,7 @@ curl.exe http://localhost:7860/tasks
 
 ## Running Inference
 
-`inference.py` uses the OpenAI Client SDK and reads the mandatory hackathon variables.
-
-### Standard Usage (Hackathon)
+`inference.py` uses the OpenAI Client SDK and reads the mandatory hackathon variables.### Standard Usage (Hackathon)
 
 ```powershell
 $env:OPENAI_API_KEY="your-api-key"
@@ -567,24 +574,24 @@ Copy `.env.example` to `.env` and fill in your values. **Never commit `.env`.**
 copy .env.example .env
 ```
 
-### Mandatory Hackathon Variables
+### Mandatory Variables
 
 These variables are read by `inference.py` and must be set for LLM-based evaluation:
 
 | Variable | Default | Required | Description |
 |----------|---------|----------|-------------|
-| `OPENAI_API_KEY` | _(empty)_ | **Yes** | API key for the LLM (also accepts `HF_TOKEN` as fallback) |
+| `OPENAI_API_KEY` | your-api-key | **Yes** | API key for the LLM (also accepts `HF_TOKEN` as fallback) |
 | `API_BASE_URL` | `https://router.huggingface.co/v1` | **Yes** | API endpoint for the LLM |
 | `MODEL_NAME` | `Qwen/Qwen2.5-72B-Instruct` | **Yes** | Model identifier to use for inference |
-| `HF_TOKEN` | _(empty)_ | No | Hugging Face token (used as API key fallback) |
+| `HF_TOKEN` | hf_your-token | No | Hugging Face token (used as API key fallback) |
 
-### Optional Variables
+### Optional Variables for fallback
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `GROK_API_KEY` | _(empty)_ | xAI Grok key (optional alternative provider) |
+| `GROK_API_KEY` | your-api-key | xAI Grok key (optional alternative provider) |
 | `GROK_MODEL` | `grok-2-latest` | Grok model name |
-| `GEMINI_API_KEY` | _(empty)_ | Google Gemini key (optional alternative provider) |
+| `GEMINI_API_KEY` | your-api-key | Google Gemini key (optional alternative provider) |
 | `GEMINI_MODEL` | `gemini-2.0-flash` | Gemini model name |
 
 The inference script uses the OpenAI Client SDK with the configured `API_BASE_URL` and `OPENAI_API_KEY`.
