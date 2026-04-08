@@ -636,7 +636,7 @@ pytest, pytest-asyncio (+ all production deps)
 ## Links
 
 - **Hugging Face Space**: `https://huggingface.co/spaces/codzzz/procurement-ai-env`
-- **GitHub Repository**: `https://github.com/codzzz/procurement-ai-env`
+- **GitHub Repository**: `https://github.com/aaditiiiii1/Procurement-AI-Env`
 - **OpenEnv Spec**: see `openenv.yaml` in this repository
 - **Local Testing Guide**: see [LOCAL_TESTING.md](LOCAL_TESTING.md)
 
